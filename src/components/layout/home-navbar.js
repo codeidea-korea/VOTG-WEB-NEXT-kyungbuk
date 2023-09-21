@@ -118,7 +118,7 @@ const HomeSubNavbar = (props) => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters sx={{ minHeight: 64, maxHeight: 70 }}>
                         {/* LOGO BUTTON */}
-                        <NextLink href="/" passHref>
+                        <NextLink href="/service/research" passHref>
                             <a>
                                 <Box
                                     sx={{

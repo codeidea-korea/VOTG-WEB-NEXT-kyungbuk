@@ -78,7 +78,7 @@ const Register = () => {
                                 justifyContent: 'center',
                             }}
                         >
-                            <NextLink href="/" passHref>
+                            <NextLink href="/service/research" passHref>
                                 <a>
                                     <Logo
                                         variant={'dark'}

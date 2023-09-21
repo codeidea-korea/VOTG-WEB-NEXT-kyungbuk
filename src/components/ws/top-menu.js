@@ -35,12 +35,12 @@ const menu = (color) => [
         icon: <IconSurvey sx={{ width: 21 }} variant="color" customColor={color} />,
         iconActive: <IconSurvey sx={{ width: 21 }} variant="color" />,
     },
-    {
-        title: '결제 관리',
-        href: '/ws/payment',
-        icon: <IconPayment sx={{ width: 21 }} variant="color" customColor={color} />,
-        iconActive: <IconPayment sx={{ width: 21 }} variant="color" />,
-    },
+    // {
+    //     title: '결제 관리',
+    //     href: '/ws/payment',
+    //     icon: <IconPayment sx={{ width: 21 }} variant="color" customColor={color} />,
+    //     iconActive: <IconPayment sx={{ width: 21 }} variant="color" />,
+    // },
     {
         title: '내정보',
         href: '/ws/mypage',
@@ -74,7 +74,7 @@ const TopMenu = (props) => {
         if (code !== undefined) {
             setopenDialogWarning_MoveHome(true)
         } else {
-            router.push('/').catch(console.error)
+            router.push('/service/research').catch(console.error)
         }
     }
     const handleCloseWarning_MoveHome = async () => {

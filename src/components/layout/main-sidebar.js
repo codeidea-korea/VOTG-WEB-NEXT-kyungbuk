@@ -248,7 +248,7 @@ export const MainSidebar = (props) => {
 
                 <Divider sx={{ width: '100%', my: 3 }} />
 
-                <NextLink href={`/panel`}>
+                {/* <NextLink href={`/panel`}>
                     <Button
                         component="a"
                         fullWidth
@@ -266,7 +266,7 @@ export const MainSidebar = (props) => {
                     >
                         패널 커뮤니티
                     </Button>
-                </NextLink>
+                </NextLink> */}
                 <Divider sx={{ width: '100%', my: 3 }} />
                 <Box sx={{ mb: 10 }} />
             </Box>

@@ -267,7 +267,7 @@ const HomeSubNavbar = (props) => {
                             <>
                                 {/* <Tooltip title="로그인·회원가입"> */}
                                 {/* <NextLink href={`/panel`}> */}
-                                <Button
+                                {/* <Button
                                     component="a"
                                     href="/panel"
                                     sx={{
@@ -279,7 +279,7 @@ const HomeSubNavbar = (props) => {
                                     // startIcon={<LoginIcon fontSize="medium" />}
                                 >
                                     패널 커뮤니티
-                                </Button>
+                                </Button> */}
                                 {/* </NextLink> */}
                                 {/* </Tooltip> */}
                             </>

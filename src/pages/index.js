@@ -25,6 +25,11 @@ import { HomeSoon } from '@components/home/home-soon'
 import IntroMediaPopover from '@components/popovers/popover-intro-media'
 
 const Home = () => {
+    // redirect 
+    window.location.pathname = '/service/research'
+    useEffect(()=>{
+    },[])
+
     const router = useRouter()
     const disableGuard = router.query.disableguard
     const { element, onMoveToElement } = useMoveScroll()
@@ -91,9 +96,9 @@ const Home = () => {
             </Head>
 
             <main>
-                <HomeSectionTop />
+                {/* <HomeSectionTop /> */}
                 {/* <Divider /> */}
-                <HomeSectionDrag onMoveScroll={onMoveToElement} />
+                {/* <HomeSectionDrag onMoveScroll={onMoveToElement} />
                 <HomeBoard />
                 <Divider />
                 <HomeServiceColumn />
@@ -101,7 +106,7 @@ const Home = () => {
                 <HomeIntro />
                 <HomeSolution />
                 <HomePrice />
-                <Box ref={element} sx={{ position: 'absolute', mt: -110 }} />
+                <Box ref={element} sx={{ position: 'absolute', mt: -110 }} /> */}
             </main>
         </>
     )

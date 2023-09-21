@@ -15,19 +15,18 @@ class ASHDocument extends Document {
                     <meta name="theme-color" content={`#fff`} />
                     <meta name="description" content="meta-content" />
                     {/* Favicon.ico */}
-                    <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-touch-icon.png" />
-                    <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png" />
-                    <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png" />
-                    <link rel="manifest" href="/ico/site.webmanifest" />
-                    <link rel="mask-icon" href="/ico/safari-pinned-tab.svg" color="#ff5353" />
+                    <link rel="apple-touch-icon" sizes="180x180" href="/ico/favicon.png" />
+                    <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon.png" />
+                    <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon.png" />
+                    <link rel="mask-icon" href="/ico/favicon.pnb" />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff"></meta>
 
                     <meta property="og:type" content="website" />
-                    <meta property="og:url" content="viewsonthego.com" />
-                    <meta property="og:title" content="뷰즈온더고" />
+                    <meta property="og:url" content="http://www.koaiarchitecture.com/service/research" />
+                    <meta property="og:title" content="인공지능 기반 건축설계 자동화 기술개발 연구단" />
                     <meta property="og:description" content="당신만의 커스텀서베이! 클릭만하면 서베이완성" />
-                    <meta property="og:image" content="/site/viewonthego_site_thumbnail.png"></meta>
+                    <meta property="og:image" content="/icons/logo.png"></meta>
 
                     <meta
                         name="keywords"

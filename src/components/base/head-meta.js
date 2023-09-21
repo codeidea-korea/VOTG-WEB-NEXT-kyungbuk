@@ -8,8 +8,8 @@ const HeadMeta = ({ title, description, url, image }) => {
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <meta property="og:title" content={title || '인공지능 기반 건축설계 자동화 기술개발 연구단'} />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content={url || process.env.NEXT_PUBLIC_HOST} />
-            <meta property="og:image" content={image || '/site/viewonthego_site_thumbnail.png'} />
+            <meta property="og:url" content={url || 'http://www.koaiarchitecture.com/service/research'} />
+            <meta property="og:image" content={image || '/icons/logo.png'} />
             <meta property="og:article:author" content="인공지능 기반 건축설계 자동화 기술개발 연구단" />
         </Head>
     )

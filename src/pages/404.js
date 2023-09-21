@@ -58,8 +58,8 @@ const NotFound404 = () => {
                         잘못된 접근입니다.
                     </Typography>
                     <Box>
-                        <Button component="a" href="https://viewsonthego.com" variant="outlined" sx={{ width: '200px', my: 5 }}>
-                            뷰즈온더고 바로가기
+                        <Button component="a" href="/" variant="outlined" sx={{ width: '200px', my: 5 }}>
+                            인공지능 기반 건축설계 자동화 기술개발 연구단 바로가기
                         </Button>
                     </Box>
                     <Box sx={{ position: 'fixed', bottom: 0, my: 5 }}>

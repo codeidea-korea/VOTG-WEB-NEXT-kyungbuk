@@ -221,7 +221,7 @@ const Page_Ipaupload = () => {
     return (
         <>
             <Head>
-                <title>{PAGE_TITLE} | 뷰즈온더고 :: Views On the Go</title>
+                <title>{PAGE_TITLE} | 인공지능 기반 건축설계 자동화 기술개발 연구단</title>
             </Head>
             <Container
                 component="main"

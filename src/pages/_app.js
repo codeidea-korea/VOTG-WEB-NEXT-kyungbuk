@@ -46,7 +46,7 @@ const App = (props) => {
         <>
             <CacheProvider value={emotionCache}>
                 <Head>
-                    <title>Views On the Go</title>
+                    <title>인공지능 기반 건축설계 자동화 기술개발 연구단</title>
                     <meta name="viewport" content="initial-scale=1, width=device-width" />
                 </Head>
                 <LocalizationProvider dateAdapter={AdapterDateFns}>

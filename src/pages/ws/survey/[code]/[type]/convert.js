@@ -114,7 +114,7 @@ const Survey_Convert = () => {
             <ConvertGuidePopover onClose={handleCloseConvertGuide} open={openDialogConvertGuide} title={'변환방법 가이드'} description={''} buttonName={'닫기'} />
             <DefaultInfoPopoverInfoConvert onClose={handleCloseDefaultInfo} open={openDialogDefaultInfo} title={'변환이 완료되었습니다.'} description={'모든 문항이 "객관식 단일응답"으로 자동 변환되었습니다.'} />
             <Head>
-                <title>설문조사 제작 | 뷰즈온더고</title>
+                <title>설문조사 제작 | 인공지능 기반 건축설계 자동화 기술개발 연구단</title>
             </Head>
             {/* <ElementSidebar onClose={() => setSidebarOpen(false)} open={isSidebarOpen} /> */}
 

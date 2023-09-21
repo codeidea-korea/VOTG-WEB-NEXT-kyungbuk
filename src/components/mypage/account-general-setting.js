@@ -383,7 +383,7 @@ export const AccountGeneralSettings = (props) => {
                                                 >
                                                     결제 카드
                                                 </Typography>
-                                                <NextLink href="/ws/payment" passHref>
+                                                {/* <NextLink href="/ws/payment" passHref>
                                                     <Button
                                                         size="large"
                                                         color="info"
@@ -394,7 +394,7 @@ export const AccountGeneralSettings = (props) => {
                                                     >
                                                         결제 관리 페이지
                                                     </Button>
-                                                </NextLink>
+                                                </NextLink> */}
                                             </ListItem>
                                         }
                                         secondary={

@@ -27,7 +27,7 @@ const Login = () => {
     return (
         <>
             <Head>
-                <title>{t('로그인')} | VOTG</title>
+                <title>{t('로그인')} | 인공지능 기반 건축설계 자동화 기술개발 연구단</title>
             </Head>
             <Box
                 component="main"

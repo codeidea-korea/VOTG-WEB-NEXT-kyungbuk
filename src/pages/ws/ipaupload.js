@@ -209,7 +209,7 @@ const Page_Ipaupload = () => {
             height:'100%'
         },
         info:{
-            background: 'rgba(253,240,239,1)',
+            background: '#e8eaf9',
             padding:'20px 10px',
         },
         p:{
@@ -248,7 +248,7 @@ const Page_Ipaupload = () => {
                 <Box
                     sx={{
                         mt: 2,
-                        background: 'rgba(253,240,239,1)',
+                        background: '#e8eaf9',
                     }}
                 >
                     <FileDropzone2

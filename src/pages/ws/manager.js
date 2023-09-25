@@ -129,7 +129,7 @@ const Page_Manager = () => {
                             <Grid item>
                                 <NextLink href={`/ws/ipaupload`}>
                                     <Button
-                                        sx={{ mr: 1 }}
+                                        sx={{ mr: 1 , mt:1 }}
                                         variant="outlined"
                                         startIcon={<FileUploadOutlinedIcon />}
                                         color='secondary'
@@ -139,7 +139,7 @@ const Page_Manager = () => {
                                 </NextLink>
                                 
                                 <Button
-                                    sx={{ mr: 1 }}
+                                    sx={{ mr: 1, mt:1 }}
                                     onClick={() => setEditableListActivation(!editableListActivation)}
                                     variant="outlined"
                                     startIcon={!editableListActivation ? <ListIcon /> : <DoneIcon />}
@@ -148,7 +148,8 @@ const Page_Manager = () => {
                                     {!editableListActivation ? '리스트 편집' : '편집 완료'}
                                 </Button>
 
-                                <Button onClick={handleOpenPopup_SurveyCreate} variant="outlined" startIcon={<PostAddIcon />} color="secondary">
+                                <Button 
+                                    sx={{  mt:1 }} onClick={handleOpenPopup_SurveyCreate} variant="outlined" startIcon={<PostAddIcon />} color="secondary">
                                     설문지 제작하기
                                 </Button>
                             </Grid>

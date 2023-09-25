@@ -25,30 +25,30 @@ const MainSidebarLink = styled(Link)(({ theme }) => ({
 }))
 
 const menuCenter = [
-    {
-        title: '서베이 조사',
-        href: '/service/research',
-    },
-    {
-        title: '통계분석',
-        href: '/service/statistics',
-    },
-    {
-        title: '크롤링',
-        href: '/service/crawling',
-    },
-    {
-        title: '빅데이터 분석',
-        href: '/service/bigdata',
-    },
-    {
-        title: '상담신청',
-        href: '/request',
-    },
-    {
-        title: '공지사항',
-        href: '/board/notice',
-    },
+    // {
+    //     title: '서베이 조사',
+    //     href: '/service/research',
+    // },
+    // {
+    //     title: '통계분석',
+    //     href: '/service/statistics',
+    // },
+    // {
+    //     title: '크롤링',
+    //     href: '/service/crawling',
+    // },
+    // {
+    //     title: '빅데이터 분석',
+    //     href: '/service/bigdata',
+    // },
+    // {
+    //     title: '상담신청',
+    //     href: '/request',
+    // },
+    // {
+    //     title: '공지사항',
+    //     href: '/board/notice',
+    // },
 ]
 
 export const MainSidebar = (props) => {
@@ -246,7 +246,7 @@ export const MainSidebar = (props) => {
 
                 <Box sx={{ flexGrow: 1 }} />
 
-                <Divider sx={{ width: '100%', my: 3 }} />
+                {/* <Divider sx={{ width: '100%', my: 3 }} /> */}
 
                 {/* <NextLink href={`/panel`}>
                     <Button
@@ -267,7 +267,7 @@ export const MainSidebar = (props) => {
                         패널 커뮤니티
                     </Button>
                 </NextLink> */}
-                <Divider sx={{ width: '100%', my: 3 }} />
+                {/* <Divider sx={{ width: '100%', my: 3 }} /> */}
                 <Box sx={{ mb: 10 }} />
             </Box>
         </Drawer>

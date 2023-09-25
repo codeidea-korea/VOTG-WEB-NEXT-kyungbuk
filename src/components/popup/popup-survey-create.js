@@ -66,7 +66,7 @@ const PopupSurveyCreate = (props) => {
                                     flexDirection: { sm: 'column', xs: 'row' },
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    transition: 'all 0.5s',
+                                    transition: 'all 0.5s', padding:'10px' ,
                                     '&:hover': {
                                         cursor: 'pointer',
                                         opacity: 0.8,
@@ -78,7 +78,7 @@ const PopupSurveyCreate = (props) => {
                                     sx={{ flexGrow: { sm: 1, xs: 'none' }, fontSize: { sm: '2rem', xs: '1.5rem' }, fontWeight: 700, color: '#fff', display: { sm: 'flex', xs: 'none' }, flexDirection: 'column', justifyContent: 'end' }}
                                 ></Typography>
                                 <IconCreateOnlineForm customColor="#fff" sx={{ flexGrow: { sm: 1, xs: 'none' }, width: { sm: '5rem', xs: '30px' }, mr: 2 }} />
-                                <Typography sx={{ flexGrow: { sm: 1, xs: 'none' }, fontSize: { sm: '2rem', xs: '1.5rem' }, fontWeight: 700, color: '#fff' }}>온라인 설문 제작하기</Typography>
+                                <Typography sx={{ flexGrow: { sm: 1, xs: 'none' }, fontSize: { sm: '2rem', xs: '1.5rem' }, fontWeight: 700, color: '#fff'}}>온라인 설문 제작하기</Typography>
                             </Box>
                         </NextLink>
                     </Box>

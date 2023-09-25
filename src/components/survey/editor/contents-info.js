@@ -34,7 +34,7 @@ const ContetnsInfo = (props) => {
                                 px: 5,
                                 pt: 5,
                                 pb: 4,
-                                border: isEditing ? '2px solid #FF5353A0' : '2px solid #fff',
+                                border: isEditing ? '2px solid #1f296aA0' : '2px solid #fff',
                                 '&:hover': !isEditing && {
                                     border: '2px solid #FF535330',
                                     cursor: 'pointer',

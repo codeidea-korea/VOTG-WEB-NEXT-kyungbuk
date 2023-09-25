@@ -45,16 +45,16 @@ const menuTypeOnlineCreate = (code, type) => [
         short: '보기',
         href: `/ws/survey/${code}/${type}/preview`,
     },
-    {
-        title: '패널설정',
-        short: '패널',
-        href: `/ws/survey/${code}/${type}/pnls`,
-    },
-    {
-        title: '리워드',
-        short: '리워드 ',
-        href: `/ws/survey/${code}/${type}/reward`,
-    },
+    // {
+    //     title: '패널설정',
+    //     short: '패널',
+    //     href: `/ws/survey/${code}/${type}/pnls`,
+    // },
+    // {
+    //     title: '리워드',
+    //     short: '리워드 ',
+    //     href: `/ws/survey/${code}/${type}/reward`,
+    // },
     {
         title: '배포하기',
         short: '배포',
@@ -73,16 +73,16 @@ const menuTypeOlineEdit = (code, type) => [
         short: '보기',
         href: `/ws/survey/${code}/${type}/preview`,
     },
-    {
-        title: '패널설정',
-        short: '패널',
-        href: `/ws/survey/${code}/${type}/pnls`,
-    },
-    {
-        title: '리워드',
-        short: '리워드 ',
-        href: `/ws/survey/${code}/${type}/reward`,
-    },
+    // {
+    //     title: '패널설정',
+    //     short: '패널',
+    //     href: `/ws/survey/${code}/${type}/pnls`,
+    // },
+    // {
+    //     title: '리워드',
+    //     short: '리워드 ',
+    //     href: `/ws/survey/${code}/${type}/reward`,
+    // },
     {
         title: '배포하기',
         short: '배포',
@@ -107,16 +107,16 @@ const menuTypeConvertCreate = (code, type) => [
         short: '보기',
         href: `/ws/survey/${code}/${type}/preview`,
     },
-    {
-        title: '패널설정',
-        short: '패널',
-        href: `/ws/survey/${code}/${type}/pnls`,
-    },
-    {
-        title: '리워드',
-        short: '리워드 ',
-        href: `/ws/survey/${code}/${type}/reward`,
-    },
+    // {
+    //     title: '패널설정',
+    //     short: '패널',
+    //     href: `/ws/survey/${code}/${type}/pnls`,
+    // },
+    // {
+    //     title: '리워드',
+    //     short: '리워드 ',
+    //     href: `/ws/survey/${code}/${type}/reward`,
+    // },
     {
         title: '배포하기',
         short: '배포',
@@ -141,16 +141,16 @@ const menuTypeConvertEdit = (code, type) => [
         short: '보기',
         href: `/ws/survey/${code}/${type}/preview`,
     },
-    {
-        title: '패널설정',
-        short: '패널',
-        href: `/ws/survey/${code}/${type}/pnls`,
-    },
-    {
-        title: '리워드',
-        short: '리워드 ',
-        href: `/ws/survey/${code}/${type}/reward`,
-    },
+    // {
+    //     title: '패널설정',
+    //     short: '패널',
+    //     href: `/ws/survey/${code}/${type}/pnls`,
+    // },
+    // {
+    //     title: '리워드',
+    //     short: '리워드 ',
+    //     href: `/ws/survey/${code}/${type}/reward`,
+    // },
     {
         title: '배포하기',
         short: '배포',

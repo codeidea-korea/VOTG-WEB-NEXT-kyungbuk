@@ -67,7 +67,7 @@ const AuthIdpw = () => {
                     justifyContent: 'center',
                 }}
             >
-                <NextLink href="/service/research" passHref>
+                <NextLink href="/" passHref>
                     <a>
                         <Logo
                             variant={'dark'}

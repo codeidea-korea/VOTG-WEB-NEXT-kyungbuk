@@ -259,7 +259,7 @@ export const HomeSectionDrag = ({ onMoveScroll }) => {
                                         display: 'flex',
                                     }}
                                 >
-                                    <img alt="" src="/origin/symbol_color_exp.svg" width={50} />
+                                    <img alt="" src="/ico/favicon.png" width={50} />
                                     <Typography
                                         color="text.black"
                                         sx={{
@@ -320,33 +320,12 @@ export const HomeSectionDrag = ({ onMoveScroll }) => {
                                     >
                                         온라인 설문 제작
                                     </Button>
-                                    <Button onClick={handleOpenConvertGuide} variant="outlined" size="medium" align="right" sx={{ ml: 0, color: 'primary.text', my: 1, display: { sm: 'none', xs: 'flex' } }} target="_blank" download>
+                                    {/* <Button onClick={handleOpenConvertGuide} variant="outlined" size="medium" align="right" sx={{ ml: 0, color: 'primary.text', my: 1, display: { sm: 'none', xs: 'flex' } }} target="_blank" download>
                                         변환 방법 가이드
-                                    </Button>
+                                    </Button> */}
                                     <Box sx={{ mt: 3, display: { sm: 'none', xs: 'flex' } }} />
                                     <Box sx={{ flexGrow: 1, display: { sm: 'flex', xs: 'none' } }} />
-                                    <Button
-                                        component="a"
-                                        href="/sample/viewsonthego_sample_pdf.pdf"
-                                        size="medium"
-                                        align="right"
-                                        sx={{ ml: { md: 2, xs: 0 }, color: 'text.secondary', fontSize: { md: '1rem', xs: '0.8rem' } }}
-                                        target="_blank"
-                                        variant="primary"
-                                        download
-                                    >
-                                        샘플 PDF
-                                    </Button>
-                                    <Button component="a" href="/sample/viewsonthego_sample_doc.docx" size="medium" align="right" sx={{ ml: { md: 2, xs: 0 }, color: 'text.secondary', fontSize: { md: '1rem', xs: '0.8rem' } }} target="_blank" download>
-                                        WORD 설문지 양식
-                                    </Button>
-                                    <Button component="a" href="/sample/viewsonthego_sample_hwp.hwp" size="medium" align="right" sx={{ ml: { md: 2, xs: 0 }, color: 'text.secondary', fontSize: { md: '1rem', xs: '0.8rem' } }} target="_blank" download>
-                                        HWP 설문지 양식
-                                    </Button>
-
-                                    <Button onClick={handleOpenConvertGuide} variant="outlined" size="medium" align="right" sx={{ ml: 2, color: 'primary.text', display: { sm: 'flex', xs: 'none' } }}>
-                                        변환 방법 가이드
-                                    </Button>
+                                    
                                 </Box>
 
                                 <Box
@@ -442,7 +421,7 @@ export const HomeSectionDrag = ({ onMoveScroll }) => {
                             marginBottom: { md: '-60px', xs: '-40px' },
                         }}
                     >
-                        <Typography
+                        {/* <Typography
                             color="primary.contrastText"
                             align="right"
                             variant="h1"
@@ -456,7 +435,7 @@ export const HomeSectionDrag = ({ onMoveScroll }) => {
                             }}
                         >
                             SURVEY MAKERS
-                        </Typography>
+                        </Typography> */}
                     </Box>
                 </Container>
             </Box>

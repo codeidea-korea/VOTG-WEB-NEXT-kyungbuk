@@ -85,9 +85,9 @@ const ContetnsCard = (props) => {
                             px: 5,
                             pt: 1,
                             pb: 1,
-                            border: isEditing ? '2px solid #FF5353A0' : dragSnapshot.isDragging ? '2px solid #FF5353A0' : '2px solid #fff',
+                            border: isEditing ? '2px solid #1f296aA0' : dragSnapshot.isDragging ? '2px solid #1f296aA0' : '2px solid #fff',
                             '&:hover': currentSelected !== questionIndex && {
-                                border: '2px solid #FF535330',
+                                border: '2px solid #1f296a30',
                                 cursor: 'pointer',
                                 transition: 'all 0.5s',
                             },

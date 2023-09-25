@@ -84,7 +84,7 @@ export const FileDropzone = (props) => {
             {files.length == 0 && (
                 <Box
                     sx={{
-                        height: { sm: '500px', xs: '300px' },
+                        height: { sm: '300px', xs: '200px' },
                         alignItems: 'center',
                         border: 1,
                         borderRadius: 1,
@@ -109,31 +109,7 @@ export const FileDropzone = (props) => {
                     {...getRootProps()}
                 >
                     <input {...getInputProps()} />
-                    <Box
-                        sx={{
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            display: 'flex',
-                            p: 2,
-                        }}
-                    >
-                        <Typography variant="button" sx={{ fontSize: '1rem' }}>
-                            {/* {`드래그한 파일${maxFiles && maxFiles === 1 ? '' : 's'}`} */}
-                            파일을 드래그 해보세요
-                        </Typography>
-                    </Box>
-                    <Button
-                        onClick={open}
-                        size="large"
-                        sx={{
-                            height: '30px',
-                            borderRadius: '20px 0px 20px 0px',
-                        }}
-                        type="button"
-                        variant="contained"
-                    >
-                        open
-                    </Button>
+                    
                 </Box>
             )}
             {files.length > 0 && (

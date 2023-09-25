@@ -31,15 +31,7 @@ const nextConfig = {
             },
         ]
     },
-    async redirects() {
-        return [
-          {
-            source: "/",
-            destination: "/service/research",
-            permanent: true
-          }
-        ]
-      }
+   
     // async redirects() {
     //     return [
     //         {

@@ -25,10 +25,6 @@ import { HomeSoon } from '@components/home/home-soon'
 import IntroMediaPopover from '@components/popovers/popover-intro-media'
 
 const Home = () => {
-    // redirect 
-    window.location.pathname = '/service/research'
-    useEffect(()=>{
-    },[])
 
     const router = useRouter()
     const disableGuard = router.query.disableguard
@@ -92,21 +88,13 @@ const Home = () => {
         <>
             {/* <IntroMediaPopover dismiss={handleDismissPopup} onClose={handleClosePopup} open={displayPopup} title={'변환이 완료되었습니다.'} description={'계속해서 설문지를 만들어보세요!'} buttonName={'닫기'} /> */}
             <Head>
-                <title>뷰즈온더고 :: Views On the Go</title>
+                <title>인공지능 기반 건축설계 자동화 기술개발 연구단</title>
             </Head>
 
             <main>
-                {/* <HomeSectionTop /> */}
-                {/* <Divider /> */}
-                {/* <HomeSectionDrag onMoveScroll={onMoveToElement} />
-                <HomeBoard />
+                <HomeSectionTop /> 
                 <Divider />
-                <HomeServiceColumn />
-                <HomeNews />
-                <HomeIntro />
-                <HomeSolution />
-                <HomePrice />
-                <Box ref={element} sx={{ position: 'absolute', mt: -110 }} /> */}
+                <HomeSectionDrag onMoveScroll={onMoveToElement} />
             </main>
         </>
     )

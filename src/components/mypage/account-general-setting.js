@@ -99,11 +99,11 @@ export const AccountGeneralSettings = (props) => {
         width: '100%',
         height: '45px',
         lineHeight: '45px',
-        border: '1px solid #EAE7E7',
+        border: '1px solid #1f296a',
         textAlign: 'center',
         height: '-webkit-fill-available',
-        border: checked === radioId ? '1px solid #EC605A' : '1px solid #E6E8F0',
-        color: checked === radioId ? '#EC605A' : '#666',
+        border: checked === radioId ? '1px solid #1f296a' : '1px solid #E6E8F0',
+        color: checked === radioId ? '#1f296a' : '#666',
     });
 
     const radiobtn = {
@@ -357,113 +357,7 @@ export const AccountGeneralSettings = (props) => {
                                 </Box>
 
                                 {/* 03 : Card */}
-                                <Box
-                                    sx={{
-                                        display: 'flex',
-                                        mb: 3,
-                                        alignItems: 'center',
-                                    }}
-                                >
-                                    <ListItemText
-                                        disableTypography
-                                        primary={
-                                            <ListItem
-                                                disableGutters
-                                                sx={{
-                                                    justifyContent: 'space-between',
-                                                    paddingInline: 1,
-                                                }}
-                                            >
-                                                <Typography
-                                                    sx={{
-                                                        color: 'text.black',
-                                                        fontSize: '1rem',
-                                                        fontWeight: '700',
-                                                    }}
-                                                >
-                                                    결제 카드
-                                                </Typography>
-                                                {/* <NextLink href="/ws/payment" passHref>
-                                                    <Button
-                                                        size="large"
-                                                        color="info"
-                                                        sx={{
-                                                            fontSize: '0.8rem',
-                                                            fontWeight: '400',
-                                                        }}
-                                                    >
-                                                        결제 관리 페이지
-                                                    </Button>
-                                                </NextLink> */}
-                                            </ListItem>
-                                        }
-                                        secondary={
-                                            <ListItem
-                                                disableGutters
-                                                sx={{
-                                                    justifyContent: 'space-between',
-                                                    paddingInline: 1,
-                                                }}
-                                            >
-                                                {user?.payment.length == 0 ? (
-                                                    <Typography
-                                                        sx={{
-                                                            color: 'text.secondary',
-                                                            fontSize: '1rem',
-                                                            '&:hover': {
-                                                                cursor: 'pointer',
-                                                                textDecoration: 'underline',
-                                                            },
-                                                        }}
-                                                        onClick={handleOpenPaymentAddDialog}
-                                                    >
-                                                        카드 등록하기
-                                                    </Typography>
-                                                ) : (
-                                                    <>
-                                                        <TableContainer>
-                                                            <Table sx={{ maxWidth: 400 }} aria-label="simple table">
-                                                                <TableBody>
-                                                                    <TableRow>
-                                                                        <TableCell
-                                                                            component="th"
-                                                                            scope="row"
-                                                                            sx={{
-                                                                                p: {
-                                                                                    md: 2,
-                                                                                    xs: 0,
-                                                                                },
-                                                                            }}
-                                                                        >
-                                                                            <Typography
-                                                                                sx={{
-                                                                                    color: 'text.black',
-                                                                                    fontSize: '0.8rem',
-                                                                                }}
-                                                                            >
-                                                                                {user?.payment[0].cardNickName}
-                                                                            </Typography>
-                                                                        </TableCell>
-                                                                        <TableCell>
-                                                                            <Typography
-                                                                                sx={{
-                                                                                    color: 'text.black',
-                                                                                    fontSize: '0.8rem',
-                                                                                }}
-                                                                            >
-                                                                                {user?.payment[0].cardName} {formatCardNumber(user?.payment[0].cardNumber)}
-                                                                            </Typography>
-                                                                        </TableCell>
-                                                                    </TableRow>
-                                                                </TableBody>
-                                                            </Table>
-                                                        </TableContainer>
-                                                    </>
-                                                )}
-                                            </ListItem>
-                                        }
-                                    />
-                                </Box>
+                                
 
                                 {/* 04 :  phone */}
                                 <Box

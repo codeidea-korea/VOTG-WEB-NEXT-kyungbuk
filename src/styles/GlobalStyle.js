@@ -86,8 +86,8 @@ const style = css`
         cursor:pointer;
     }
     .custom_check:checked + label {
-        border:1px solid rgb(236,96,90);
-        color:rgb(236,96,90)
+        border:1px solid #1f296a;
+        color:#1f296a
     }
 
     .graph_wrap {

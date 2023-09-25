@@ -16,15 +16,15 @@ const background = {
     default: '#FCFCFC',
     grade: '#F9FAFC',
     paper: '#FFFFFF',
-    primary: '#EC605A',
+    primary: '#1f296a',
 }
 
-const divider = '#E6E8F0'
+const divider = '#8a97cb'
 
 const primary = {
-    main: '#EC605A',
+    main: '#1f296a',
     light: '#FF8264',
-    dark: '#FF5353',
+    dark: '#1f296a',
     contrastText: '#FFFFFF',
 }
 
@@ -85,7 +85,7 @@ const warning = {
 }
 
 const error = {
-    main: '#D14343',
+    main: '#1f296a',
     light: '#DA6868',
     dark: '#922E2E',
     contrastText: '#FFFFFF',

@@ -39,10 +39,10 @@ const menuInitInfo = [
     { index: 0, title: '설문변환', name: '다음', event: () => console.log('다음') },
     { index: 1, title: '설문제작', name: '다음', event: () => console.log('다음') },
     { index: 2, title: '미리보기', name: '다음', event: () => console.log('다음') },
-    { index: 3, title: '패널설정', name: '다음', event: () => console.log('다음') },
-    { index: 4, title: '리워드', name: '다음', event: () => console.log('다음') },
-    { index: 5, title: '배포하기', name: '배포하기', event: () => console.log('배포') },
-    { index: 6, title: '설문수정', name: '다음', event: () => console.log('다음') },
+    // { index: 3, title: '패널설정', name: '다음', event: () => console.log('다음') },
+    // { index: 4, title: '리워드', name: '다음', event: () => console.log('다음') },
+    { index: 3, title: '배포하기', name: '배포하기', event: () => console.log('배포') },
+    { index: 4, title: '설문수정', name: '다음', event: () => console.log('다음') },
 ]
 
 /**
@@ -73,10 +73,10 @@ const LayoutSurveyProgressMenu = (props) => {
             { ...menuInitInfo[0], name: '설문수정', event: event_JustRouting }, // type = cnvt 일때 사용
             { ...menuInitInfo[1], name: '다음', event: eventSurveyNext }, // 설문조사 신규 생성
             { ...menuInitInfo[2], name: '다음', event: () => handleOpen(2) },
-            { ...menuInitInfo[3], name: '다음', event: () => handleOpen(3) },
-            { ...menuInitInfo[4], name: '다음', event: event_JustRouting },
-            { ...menuInitInfo[5], name: '배포하기', event: () => handleOpen(5) },
-            { ...menuInitInfo[6], name: '다음', event: eventSurveyNext }, // 설문조사 기존 수정
+            // { ...menuInitInfo[3], name: '다음', event: () => handleOpen(3) },
+            // { ...menuInitInfo[4], name: '다음', event: event_JustRouting },
+            { ...menuInitInfo[3], name: '배포하기', event: () => handleOpen(5) },
+            { ...menuInitInfo[4], name: '다음', event: eventSurveyNext }, // 설문조사 기존 수정
         ]
         setMenuInfo(updateMenu)
     }, [])

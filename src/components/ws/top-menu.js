@@ -33,7 +33,7 @@ const menu = (color) => [
         title: '설문지 관리',
         href: '/ws/manager',
         icon: <IconSurvey sx={{ width: 21 }} variant="color" customColor={color} />,
-        iconActive: <IconSurvey sx={{ width: 21 }} variant="color" />,
+        iconActive: <IconSurvey sx={{ width: 21 }} variant="color" customColor={"#1f296a"} />,
     },
     // {
     //     title: '결제 관리',
@@ -45,7 +45,7 @@ const menu = (color) => [
         title: '내정보',
         href: '/ws/mypage',
         icon: <IconMypage sx={{ width: 21 }} variant="color" customColor={color} />,
-        iconActive: <IconMypage sx={{ width: 21 }} variant="color" />,
+        iconActive: <IconMypage sx={{ width: 21 }} variant="color" customColor={"#1f296a"} />,
     },
 ]
 
@@ -74,7 +74,7 @@ const TopMenu = (props) => {
         if (code !== undefined) {
             setopenDialogWarning_MoveHome(true)
         } else {
-            router.push('/service/research').catch(console.error)
+            router.push('/').catch(console.error)
         }
     }
     const handleCloseWarning_MoveHome = async () => {
@@ -184,7 +184,7 @@ const TopMenu = (props) => {
                             mr: 1,
                         }}
                     >
-                        <img alt="" src="/origin/symbol_color_exp.svg" width={40} />
+                        <img alt="" src="/ico/favicon.png" width={40} />
                     </IconButton>
 
                     {/* empty space */}

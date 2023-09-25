@@ -55,34 +55,7 @@ const PopupSurveyCreate = (props) => {
                     </Box>
                     <Box sx={{ my: 2 }} />
                     <Box sx={{ width: '100%', height: { sm: '45vh', xs: '20vh' }, px: 3, py: 2, display: 'flex', flexWrap: 'wrap', gap: '3rem', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <NextLink href={`/ws/survey/${createResourceCode()}/${surveyType[1].url}/convert`}>
-                            <Box
-                                sx={{
-                                    flexGrow: 1,
-                                    height: '100%',
-                                    background: '#FF5353',
-                                    display: 'flex',
-                                    flexDirection: { sm: 'column', xs: 'row' },
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    transition: 'all 0.5s',
-                                    '&:hover': {
-                                        cursor: 'pointer',
-                                        opacity: 0.8,
-                                        transition: 'all 0.5s',
-                                    },
-                                    px: 1,
-                                }}
-                            >
-                                <Typography sx={{ flexGrow: { sm: 1, xs: 'none' }, fontSize: { sm: '2rem', xs: '1.5rem' }, fontWeight: 700, color: '#fff', display: { sm: 'flex', xs: 'none' }, flexDirection: 'column', justifyContent: 'end' }}>
-                                    Drag & Drop
-                                </Typography>
-                                <IconCreateDragDrop customColor="#fff" sx={{ flexGrow: { sm: 1, xs: 'none' }, width: { sm: '5rem', xs: '30px' }, mr: 2 }} />
-                                <Typography sx={{ flexGrow: { sm: 1, xs: 'none' }, fontSize: { sm: '2rem', xs: '1.5rem' }, fontWeight: 700, color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
-                                    자동 변환 제작하기
-                                </Typography>
-                            </Box>
-                        </NextLink>
+                        
                         <NextLink href={`/ws/survey/${createResourceCode()}/${surveyType[0].url}/editor`}>
                             <Box
                                 sx={{

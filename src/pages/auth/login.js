@@ -104,11 +104,11 @@ const Login = () => {
                             </Box>
                             <Box sx={{ my: 1 }} />
 
-                            <NextLink href={'/privacy'} passHref>
+                            {/* <NextLink href={'/privacy'} passHref>
                                 <Link color="textSecondary" variant="body2">
                                     개인정보보호정책
                                 </Link>
-                            </NextLink>
+                            </NextLink> */}
                         </Box>
                     </Card>
                 </Container>

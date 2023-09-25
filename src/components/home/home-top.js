@@ -46,7 +46,7 @@ export const HomeSectionTop = (props) => {
                             },
                         }}
                     >
-                        DRAG AND SURVEY
+                        SURVEY
                     </Typography>
                 </Box>
             </Container>

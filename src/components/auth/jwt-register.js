@@ -141,12 +141,12 @@ export const JWTRegister = (props) => {
         width: '100%',
         height: '45px',
         lineHeight: '45px',
-        border: '1px solid #EAE7E7',
+        border: '1px solid #1f296a',
         textAlign: 'center',
         height: '-webkit-fill-available',
         cursor:'pointer',
-        border: checked === radioId ? '1px solid #EC605A' : '1px solid #E6E8F0',
-        color: checked === radioId ? '#EC605A' : '#666',
+        border: checked === radioId ? '1px solid #1f296a' : '1px solid #E6E8F0',
+        color: checked === radioId ? '#1f296a' : '#666',
     });
 
     const radiobtn = {

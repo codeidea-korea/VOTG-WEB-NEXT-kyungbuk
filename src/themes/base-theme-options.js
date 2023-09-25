@@ -130,7 +130,7 @@ export const baseThemeOptions = (path) => {
                         pointerEvents: 'none',
                     },
                     '#nprogress .bar': {
-                        backgroundColor: path.includes('panel') ? '#1C60FF' : '#FF8264',
+                        backgroundColor: path.includes('panel') ? '#1f296a' : '#1f296a',
                         height: 3,
                         left: 0,
                         position: 'fixed',

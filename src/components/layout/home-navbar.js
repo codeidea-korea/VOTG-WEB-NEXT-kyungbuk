@@ -23,30 +23,30 @@ import { Menu as MenuIcon } from '@components/icons/menu'
 // 1. Menu List
 /* 서베이조사,  통계분석 크롤링 빅데이터분석, 의뢰하기 */
 const menuCenter = [
-    {
-        title: '서베이 조사',
-        href: '/service/research',
-    },
-    {
-        title: '통계분석',
-        href: '/service/statistics',
-    },
-    {
-        title: '크롤링',
-        href: '/service/crawling',
-    },
-    {
-        title: '빅데이터 분석',
-        href: '/service/bigdata',
-    },
-    {
-        title: '상담신청',
-        href: '/request',
-    },
-    {
-        title: '공지사항',
-        href: '/board/notice',
-    },
+    // {
+    //     title: '서베이 조사',
+    //     href: '/service/research',
+    // },
+    // {
+    //     title: '통계분석',
+    //     href: '/service/statistics',
+    // },
+    // {
+    //     title: '크롤링',
+    //     href: '/service/crawling',
+    // },
+    // {
+    //     title: '빅데이터 분석',
+    //     href: '/service/bigdata',
+    // },
+    // {
+    //     title: '상담신청',
+    //     href: '/request',
+    // },
+    // {
+    //     title: '공지사항',
+    //     href: '/board/notice',
+    // },
 ]
 
 const HomeSubNavbar = (props) => {
@@ -118,7 +118,7 @@ const HomeSubNavbar = (props) => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters sx={{ minHeight: 64, maxHeight: 70 }}>
                         {/* LOGO BUTTON */}
-                        <NextLink href="/service/research" passHref>
+                        <NextLink href="/" passHref>
                             <a>
                                 <Box
                                     sx={{

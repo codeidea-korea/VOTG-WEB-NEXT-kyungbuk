@@ -27,6 +27,7 @@ import LayoutWithServiceMenu from '@layouts/ws/layout-with-service-menu'
 import * as echarts from 'echarts';
 // import 'echarts-stat';
 import ecStat from 'echarts-stat';
+import { FileDropzone2 } from '@components/convert/home-file-dropzone-demo2'
 
 
 
@@ -250,7 +251,7 @@ const Page_Ipaupload = () => {
                         background: 'rgba(253,240,239,1)',
                     }}
                 >
-                    <FileDropzone
+                    <FileDropzone2
                         accept={{
                             'application/pdf': [],
                         }}

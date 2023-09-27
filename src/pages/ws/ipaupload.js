@@ -341,7 +341,7 @@ const Page_Ipaupload = () => {
                 name:'average',
                 type: 'scatter',
                 encode: { tooltip: [0, 1] },
-                symbolSize: 15,
+                symbolSize: 8,
                 itemStyle: {
                   borderColor: '#555'
                 },

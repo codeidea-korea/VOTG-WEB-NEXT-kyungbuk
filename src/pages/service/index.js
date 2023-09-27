@@ -6,7 +6,7 @@ const Project = () => {
         if (!router.isReady) {
             return
         }
-        router.push('/service/research').catch(console.error)
+        router.push('/').catch(console.error)
     }, [router])
     return <></>
 }

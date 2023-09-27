@@ -23,7 +23,7 @@ class ASHDocument extends Document {
                     <meta name="theme-color" content="#ffffff"></meta>
 
                     <meta property="og:type" content="website" />
-                    <meta property="og:url" content="http://www.koaiarchitecture.com/service/research" />
+                    <meta property="og:url" content="http://www.koaiarchitecture.com/" />
                     <meta property="og:title" content="인공지능 기반 건축설계 자동화 기술개발 연구단" />
                     <meta property="og:description" content="당신만의 커스텀서베이! 클릭만하면 서베이완성" />
                     <meta property="og:image" content="/icons/logo.png"></meta>

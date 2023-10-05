@@ -162,12 +162,12 @@ export const HomeSectionDrag = ({ onMoveScroll }) => {
     return (
         <>
             <DefaultInfoPopoverInfoConvert onClose={handleCloseMoveScroll} open={openDialogDefaultInfo} title={'변환이 완료되었습니다.'} description={'계속해서 설문지를 만들어보세요!'} event={onMoveScroll} />
-            <ServiceCheckPopover
+            {/* <ServiceCheckPopover
                 onClose={handleCloseServiceCheck}
                 open={openDialogServiceCheck}
                 title={'설문지 파일을 드래그해서 변환해보세요!'}
                 // dismiss={handleDismissServiceCheck}
-            />
+            /> */}
             <ServiceCheckPopover
                 onClose={handelMoveScroll}
                 open={openDialogServiceBillingInfo}

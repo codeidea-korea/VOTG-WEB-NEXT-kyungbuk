@@ -83,8 +83,17 @@ const Page_Ipaupload = () => {
             }
 
             const xyData = [];
+            const data1 = [];
+            const data2 = [];
+            const data3 = [];
+            const data4 = [];
+            const data5 = [];
             let first = 0;
+			let x_total = 0;
+			let y_total = 0;
             let y_total1 = 0; let y_total2 = 0; let y_total3 = 0; let y_total4 = 0; let y_total5 = 0; 
+			let x_mean = 0;
+			let y_mean = 0;
 
             for (let count = 0; count < data.length; count++) {
                 if (count > 0 && count <= 30){
@@ -100,9 +109,9 @@ const Page_Ipaupload = () => {
                     // 상관계수 계산
                     const corrcoef = cov / (std1 * std2);
                     // x축
-                    const x_val = Math.round(mean2 * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
                     // y축
-                    const y_val = Math.round(corrcoef * 1000) / 100;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     // 좌표값
                     y_total1 = y_total1 + y_val;
                 }else if (count > 31 && count <= 61){
@@ -113,8 +122,8 @@ const Page_Ipaupload = () => {
                     const std2 = Math.sqrt(data[count].reduce((acc, val) => acc + (val - mean2) ** 2, 0) / (data[count].length - 1));
                     const cov = data[first].reduce((acc, val, idx) => acc + ((val - mean1) * (data[count][idx] - mean2)), 0) / (data[first].length - 1);
                     const corrcoef = cov / (std1 * std2);
-                    const x_val = Math.round(mean2 * 100) / 100;
-                    const y_val = Math.round(corrcoef * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     y_total2 = y_total2 + y_val;
                 }else if (count > 62 && count <= 92){
                     first = 62;
@@ -124,8 +133,8 @@ const Page_Ipaupload = () => {
                     const std2 = Math.sqrt(data[count].reduce((acc, val) => acc + (val - mean2) ** 2, 0) / (data[count].length - 1));
                     const cov = data[first].reduce((acc, val, idx) => acc + ((val - mean1) * (data[count][idx] - mean2)), 0) / (data[first].length - 1);
                     const corrcoef = cov / (std1 * std2);
-                    const x_val = Math.round(mean2 * 100) / 100;
-                    const y_val = Math.round(corrcoef * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     y_total3 = y_total3 + y_val;
                 }else if (count > 93 && count <= 123){
                     first = 93;
@@ -135,8 +144,8 @@ const Page_Ipaupload = () => {
                     const std2 = Math.sqrt(data[count].reduce((acc, val) => acc + (val - mean2) ** 2, 0) / (data[count].length - 1));
                     const cov = data[first].reduce((acc, val, idx) => acc + ((val - mean1) * (data[count][idx] - mean2)), 0) / (data[first].length - 1);
                     const corrcoef = cov / (std1 * std2);
-                    const x_val = Math.round(mean2 * 100) / 100;
-                    const y_val = Math.round(corrcoef * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     y_total4 = y_total4 + y_val;
                 }else if (count > 124){
                     first = 124;
@@ -146,8 +155,8 @@ const Page_Ipaupload = () => {
                     const std2 = Math.sqrt(data[count].reduce((acc, val) => acc + (val - mean2) ** 2, 0) / (data[count].length - 1));
                     const cov = data[first].reduce((acc, val, idx) => acc + ((val - mean1) * (data[count][idx] - mean2)), 0) / (data[first].length - 1);
                     const corrcoef = cov / (std1 * std2);
-                    const x_val = Math.round(mean2 * 100) / 100;
-                    const y_val = Math.round(corrcoef * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     y_total5 = y_total5 + y_val;
                 }
             }
@@ -166,11 +175,16 @@ const Page_Ipaupload = () => {
                     // 상관계수 계산
                     const corrcoef = cov / (std1 * std2);
                     // x축
-                    const x_val = Math.round(mean2 * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
                     // y축
-                    const y_val = Math.round(corrcoef * 100) / 100;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     // 좌표값
                     xyData.push([x_val, (y_val / y_total1)]);
+					// 0~30 좌표값
+                    data1.push([x_val, (y_val / y_total1)]);
+					// 좌표값 합계
+					x_total = x_total + x_val;
+					y_total = y_total + (y_val / y_total1);
                 }else if (count > 31 && count <= 61){
                     first = 31;
                     const mean1 = data[first].reduce((acc, val) => acc + val) / data[first].length;
@@ -179,9 +193,14 @@ const Page_Ipaupload = () => {
                     const std2 = Math.sqrt(data[count].reduce((acc, val) => acc + (val - mean2) ** 2, 0) / (data[count].length - 1));
                     const cov = data[first].reduce((acc, val, idx) => acc + ((val - mean1) * (data[count][idx] - mean2)), 0) / (data[first].length - 1);
                     const corrcoef = cov / (std1 * std2);
-                    const x_val = Math.round(mean2 * 100) / 100;
-                    const y_val = Math.round(corrcoef * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     xyData.push([x_val, (y_val / y_total2)]);
+					// 31~61 좌표값
+                    data2.push([x_val, (y_val / y_total2)]);
+					// 좌표값 합계
+					x_total = x_total + x_val;
+					y_total = y_total + (y_val / y_total2);
                 }else if (count > 62 && count <= 92){
                     first = 62;
                     const mean1 = data[first].reduce((acc, val) => acc + val) / data[first].length;
@@ -190,9 +209,14 @@ const Page_Ipaupload = () => {
                     const std2 = Math.sqrt(data[count].reduce((acc, val) => acc + (val - mean2) ** 2, 0) / (data[count].length - 1));
                     const cov = data[first].reduce((acc, val, idx) => acc + ((val - mean1) * (data[count][idx] - mean2)), 0) / (data[first].length - 1);
                     const corrcoef = cov / (std1 * std2);
-                    const x_val = Math.round(mean2 * 100) / 100;
-                    const y_val = Math.round(corrcoef * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     xyData.push([x_val, (y_val / y_total3)]);
+					// 62~92 좌표값
+                    data3.push([x_val, (y_val / y_total3)]);
+					// 좌표값 합계
+					x_total = x_total + x_val;
+					y_total = y_total + (y_val / y_total3);
                 }else if (count > 93 && count <= 123){
                     first = 93;
                     const mean1 = data[first].reduce((acc, val) => acc + val) / data[first].length;
@@ -201,9 +225,14 @@ const Page_Ipaupload = () => {
                     const std2 = Math.sqrt(data[count].reduce((acc, val) => acc + (val - mean2) ** 2, 0) / (data[count].length - 1));
                     const cov = data[first].reduce((acc, val, idx) => acc + ((val - mean1) * (data[count][idx] - mean2)), 0) / (data[first].length - 1);
                     const corrcoef = cov / (std1 * std2);
-                    const x_val = Math.round(mean2 * 100) / 100;
-                    const y_val = Math.round(corrcoef * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     xyData.push([x_val, (y_val / y_total4)]);
+					// 93~123 좌표값
+                    data4.push([x_val, (y_val / y_total4)]);
+					// 좌표값 합계
+					x_total = x_total + x_val;
+					y_total = y_total + (y_val / y_total4);
                 }else if (count > 124){
                     first = 124;
                     const mean1 = data[first].reduce((acc, val) => acc + val) / data[first].length;
@@ -212,9 +241,14 @@ const Page_Ipaupload = () => {
                     const std2 = Math.sqrt(data[count].reduce((acc, val) => acc + (val - mean2) ** 2, 0) / (data[count].length - 1));
                     const cov = data[first].reduce((acc, val, idx) => acc + ((val - mean1) * (data[count][idx] - mean2)), 0) / (data[first].length - 1);
                     const corrcoef = cov / (std1 * std2);
-                    const x_val = Math.round(mean2 * 100) / 100;
-                    const y_val = Math.round(corrcoef * 100) / 100;
+                    const x_val = Math.round(mean2 * 1000) / 1000;
+                    const y_val = Math.round(corrcoef * 1000) / 1000;
                     xyData.push([x_val, (y_val / y_total5)]);
+					// 124~150 좌표값
+                    data5.push([x_val, (y_val / y_total5)]);
+					// 좌표값 합계
+					x_total = x_total + x_val;
+					y_total = y_total + (y_val / y_total5);
                 }
             }
             
@@ -226,143 +260,171 @@ const Page_Ipaupload = () => {
             var myChart = echarts.init(chartDom);
             var option;
 
-            // See https://github.com/ecomfe/echarts-stat
-            echarts.registerTransform(ecStat.transform.clustering);
-            for (var k = 0; k < xyData.length; k++) {
-                if(k==0){
-                   var xmin = xyData[k][0];
-                   var xmax = xyData[k][0];
-                   var ymin = xyData[k][1];
-                   var ymax = xyData[k][1];
-                  }
-                if(xyData[k][0]<xmin){
-                      xmin = xyData[k][0];
-                  }
-                if(xyData[k][0]>xmax){
-                      xmax = xyData[k][0];
-                  }
-                if(xyData[k][1]<ymin){
-                      ymin = xyData[k][1];
-                  }
-                if(xyData[k][1]>ymax){
-                      ymax = xyData[k][1];
-                  }
-            }
-            xmin = (Math.round(xmin*0.9*10)/10).toFixed(2);
-            xmax = (Math.round(xmax*1.1*10)/10).toFixed(2);
-            ymin = (Math.round(ymin*0.9*10)/10).toFixed(2);
-            ymax = (Math.round(ymax*1.1*10)/10).toFixed(2);
-            
-            //alert(xmin+'/'+xmax+'/'+ymin+'/'+ymax);
-            var CLUSTER_COUNT = 6;
-            var DIENSIION_CLUSTER_INDEX = 2;
-            let clusterName = '';
-            var COLOR_ALL = [
-              '#37A2DA',
-              '#e06343',
-              '#37a354',
-              '#b55dba',
-              '#b5bd48',
-              '#8378EA',
-              '#96BFFF'
-            ];
-            var pieces = [];
-            for (var i = 0; i < CLUSTER_COUNT; i++) {
-                if(i=='0'){
-                      clusterName = 'Group1 입지 만족도와 중요도';
-                  }else if(i=='1'){
-                      clusterName = 'Group2 배치 만족도와 중요도';
-                  }else if(i=='2'){
-                      clusterName = 'Group3 건물외관 만족도와 중요도';
-                  }else if(i=='3'){
-                      clusterName = 'Group4 단위공간 만족도와 중요도 ';
-                  }else if(i=='4'){
-                      clusterName = 'Group5 주변환경 만족도와 중요도';
-                  }
-              pieces.push({
-                value: i,
-                label: clusterName,
-                color: COLOR_ALL[i]
-              });
-            }
+			// x평균/y평균
+			x_mean = x_total/150;
+			y_mean = y_total/150;
+			//console.log(data.length);
+			//console.log(x_total+'/'+y_total);
+			//console.log(x_mean+'/'+y_mean);
+
+			// X축/Y축 최소값/최대값 구하기
+			var xmin = data1[0][0];
+			var xmax = data1[0][0];
+			var ymin = data1[0][1];
+			var ymax = data1[0][1];
+
+			for (var k = 0; k < data1.length; k++) {
+				if(data1[k][0]<xmin){          xmin = data1[k][0];      }    
+				if(data1[k][0]>xmax){          xmax = data1[k][0];      }
+				if(data1[k][1]<ymin){          ymin = data1[k][1];      }
+				if(data1[k][1]>ymax){          ymax = data1[k][1];      }
+			}
+			for (var k = 0; k < data2.length; k++) {
+				if(data2[k][0]<xmin){          xmin = data2[k][0];      }    
+				if(data2[k][0]>xmax){          xmax = data2[k][0];      }
+				if(data2[k][1]<ymin){          ymin = data2[k][1];      }
+				if(data2[k][1]>ymax){          ymax = data2[k][1];      }
+			}
+			for (var k = 0; k < data3.length; k++) {
+				if(data3[k][0]<xmin){          xmin = data3[k][0];      }    
+				if(data3[k][0]>xmax){          xmax = data3[k][0];      }
+				if(data3[k][1]<ymin){          ymin = data3[k][1];      }
+				if(data3[k][1]>ymax){          ymax = data3[k][1];      }
+			}
+			for (var k = 0; k < data4.length; k++) {
+				if(data4[k][0]<xmin){          xmin = data4[k][0];      }    
+				if(data4[k][0]>xmax){          xmax = data4[k][0];      }
+				if(data4[k][1]<ymin){          ymin = data4[k][1];      }
+				if(data4[k][1]>ymax){          ymax = data4[k][1];      }
+			}
+			for (var k = 0; k < data5.length; k++) {
+				if(data5[k][0]<xmin){          xmin = data5[k][0];      }    
+				if(data5[k][0]>xmax){          xmax = data5[k][0];      }
+				if(data5[k][1]<ymin){          ymin = data5[k][1];      }
+				if(data5[k][1]>ymax){          ymax = data5[k][1];      }
+			}
+
+			xmin = (Math.round(xmin*0.99*1000)/1000).toFixed(3);
+			xmax = (Math.round(xmax*1.01*1000)/1000).toFixed(3);
+			ymin = (Math.round(ymin*0.9*1000)/1000).toFixed(3);
+			ymax = (Math.round(ymax*1.1*1000)/1000).toFixed(3);
+            console.log(xmin+'/'+xmax+'/'+ymin+'/'+ymax);
+
             option = {
-              dataset: [
-                {
-                  source: xyData
-                },
-                {
-                  transform: {
-                    type: 'ecStat:clustering',
-                    // print: true,
-                    config: {
-                      clusterCount: CLUSTER_COUNT,
-                      outputType: 'single',
-                      outputClusterIndexDimension: DIENSIION_CLUSTER_INDEX
-                    }
-                  }
-                }
-              ],
-              tooltip: {
-                position: 'top'
-              },
-              visualMap: {
-                type: 'piecewise',
-                top: 'middle',
-                min: 0,
-                max: CLUSTER_COUNT,
-                left: 10,
-                splitNumber: CLUSTER_COUNT,
-                dimension: DIENSIION_CLUSTER_INDEX,
-                pieces: pieces
-              },
-              grid: {
-                left: 260
-              },
-              xAxis: [
-                {
-                  name: 'Performance\n(Mean Satisfaction Scores)',
-                  min: xmin,
-                  max: xmax,
-                  type: 'value',
-                  axisLine: { onZero: false }
-                }
-              ],
-              yAxis: [
-                {
-                  name: 'Importance\n(Correclation with Overall Satisfaction)',
-                  position: 'left',
-                  min: ymin,
-                  max: ymax,
-                  type: 'value',
-                  axisLine: { onZero: false }
-                }
-              ],
-              series: {
-                name:'average',
-                type: 'scatter',
-                encode: { tooltip: [0, 1] },
-                symbolSize: 8,
-                itemStyle: {
-                  borderColor: '#555'
-                },
-                datasetIndex: 1,
-                markLine: {
-                  lineStyle: {
-                    type: 'dashed'
-                  },
-                  data: [
-                    {
-                      name: 'average',
-                      xAxis: 'average'
-                    },
-                    {
-                      name: 'average',
-                      yAxis: 'average'
-                    },
-                  ]
-                }
-              }
-            };
+			  legend: {},
+			  grid: {
+			 	  left: '100',
+				  right: '200',
+				  bottom: '0',
+				  top: '100',
+				  containLabel: true
+			  },
+			  xAxis: [
+				{
+				  name: 'Performance\n(Mean Satisfaction Scores)',
+				  type: 'value',
+				  scale: true,
+				  axisLabel: {
+					formatter: '{value} '
+				  },
+				  splitLine: {
+					show: false
+				  },
+				  min: xmin,
+				  max: xmax,
+				  axisLine: { onZero: false }
+				}
+				],
+				yAxis: [
+				{
+				  name: 'Importance\n(Correclation with Overall Satisfaction)',
+				  type: 'value',
+				  scale: true,
+				  axisLabel: {
+					formatter: '{value} '
+				  },
+				  splitLine: {
+					show: false
+				  },
+				  min: ymin,
+				  max: ymax,
+				  axisLine: { onZero: false }
+				}
+			  ],
+			  series: [
+				{
+				  name: '입지 만족도와 중요도',
+				  type: 'scatter',
+				  emphasis: {
+					focus: 'series'
+				  },
+				  // prettier-ignore
+				  data: data1,
+				  symbolSize: 8,
+				},
+				{
+				  name: '배치 만족도와 중요도',
+				  type: 'scatter',
+				  emphasis: {
+					focus: 'series'
+				  },
+				  // prettier-ignore
+				  data: data2,
+				  symbolSize: 8,
+				},
+				{
+				  name: '건물외관 만족도와 중요도',
+				  type: 'scatter',
+				  emphasis: {
+					focus: 'series'
+				  },
+				  // prettier-ignore
+				  data: data3,
+				  symbolSize: 8,
+				},
+				{
+				  name: '단위공간 만족도와 중요도',
+				  type: 'scatter',
+				  emphasis: {
+					focus: 'series'
+				  },
+				  // prettier-ignore
+				  data: data4,
+				  symbolSize: 8,
+				},
+				{
+				  name: '주변환경 만족도와 중요도',
+				  type: 'scatter',
+				  emphasis: {
+					focus: 'series'
+				  },
+				  // prettier-ignore
+				  data: data5,
+				  symbolSize: 8,
+				},
+				{
+				  type: 'scatter',
+				  emphasis: {
+					focus: 'series'
+				  },
+				  markLine: {
+					lineStyle: {
+					  type: 'dashed'
+					},
+					data: [
+					  {
+						name: 'average',
+						xAxis: x_mean
+					  },
+					  {
+						name: 'average',
+						yAxis: y_mean
+					  },
+					]
+				  }
+				},
+			  ]
+			};
 
             myChart.setOption(option);
         }
@@ -382,7 +444,8 @@ const Page_Ipaupload = () => {
         },
         info:{
             background: 'rgba(253,240,239,1)',
-            padding:'20px 10px',
+            padding:'20px 0px',
+            width:'110px',
         },
         p:{
             margin:'0 auto',
@@ -394,7 +457,7 @@ const Page_Ipaupload = () => {
     return (
         <>
             <Head>
-                <title>{PAGE_TITLE} | 뷰즈온더고 :: Views On the Go</title>
+                <title>{PAGE_TITLE} | 인공지능 기반 건축설계 자동화 기술개발 연구단</title>
             </Head>
             <Container
                 component="main"
@@ -442,7 +505,7 @@ const Page_Ipaupload = () => {
                     <div className='graph_wrap'>
                         <div style={graphStyle.info}>
                             <p style={graphStyle.p}>IPA 분석 그래프</p>
-                            <p style={graphStyle.p}>표본 : {excelData.length}개</p>
+                            <p style={graphStyle.p}>표본 : {excelData.length-1}개</p>
                             {/* <p style={graphStyle.p}>업로드 일시 :</p>
                             <p style={graphStyle.p}>{new Date().toLocaleTimeString()}</p> */}
                         </div>
